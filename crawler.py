@@ -13,7 +13,7 @@ if __name__ == '__main__':
     # 使用现成的cookie直接绕过登录页面
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36',
-        'Cookie': 'JSESSIONID=03CAF8C2AF53FC45E2FE7E115D9C6663; session_id=6BA05B378A8C9369E72001F2CE0D481D; s_session_id=A9855031C21091EA8A2B28708004F6E6; web_client_cache_guid=db210d06-c511-4e41-866b-7577ced68e5c',
+        'Cookie': 'JSESSIONID=CAF0170A4903EA5D0F23AA3A5174F8BA; session_id=6BA05B378A8C9369E72001F2CE0D481D; s_session_id=5310CFBE2BBA2403DFE2C10599CB5F24; web_client_cache_guid=b1edfa1a-ccd2-4438-88aa-c1b7ab791011',
     }
 
     # 总尝试页面
