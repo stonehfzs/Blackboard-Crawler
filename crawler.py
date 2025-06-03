@@ -66,7 +66,7 @@ if __name__ == '__main__':
                     if not text:
                         text = div.xpath('normalize-space(.//div[@class="vtbegenerated inlineVtbegenerated"])')
                 # 只保留非空且未重复的选项
-                if text and text not in option_texts:
+                if text and text not in option_texts and '[未选中]' not in text:
                     option_texts.append(text)
                 # 只保留class完全等于correctAnswerFlag的为正确答案
                 if div.xpath('.//span[@class="correctAnswerFlag" and not(contains(@class,"incorrectAnswerFlag"))]'):
@@ -126,7 +126,8 @@ if __name__ == '__main__':
         fp3.write(str(num) + '. ' + pro + '\n')
         fp3.write('选项：\n')
         for opt in panduan[pro]['options']:
-            fp3.write('  ' + opt + '\n')
+            if '[未给定]' not in opt:
+                fp3.write('  ' + opt + '\n')
         fp3.write('正确答案：' + str(panduan[pro]['correct']) + '\n\n')
 
 
